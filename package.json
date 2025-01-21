@@ -2,9 +2,9 @@
   "name": "has-tech-service-backend",
   "version": "1.0.0",
   "description": "Backend of Has Tech Service",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
@@ -14,20 +14,12 @@
     "nodemailer": "^6.9.16"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=16.x <23.x"
   },
-  "vercel": {
-    "builds": [
-      {
-        "src": "src/index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/src/index.js"
-      }
-    ]
-  }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ]
 }
