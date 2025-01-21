@@ -4,7 +4,7 @@
   "description": "Backend of Has Tech Service",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
